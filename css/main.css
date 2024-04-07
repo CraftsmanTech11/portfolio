@@ -572,6 +572,13 @@ Skills Section
 	top:-25px;
 	right:0;
 }
+#portfolio2 .modal.in .modal-dialog {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events:none
+}
 
 
 /*==================================================
@@ -587,6 +594,9 @@ Projects Section
 ul.folio-menu{
   margin-bottom: 30px;
   text-align: center;
+  display: flex;
+  overflow: auto;
+  justify-content: center;
 }
 
 ul.folio-menu li{
@@ -934,8 +944,8 @@ Footer
   position: relative;
 }
 
-form.contact-form{
-  margin-top: 40px;
+footer .container{
+  padding-top: 70px;
 }
 
 form.contact-form .form-group{
@@ -1049,6 +1059,10 @@ ul.social-icons li a:hover{
   /* Footer -----------------------------------------------------------------------------------------------------------------------------------*/
   .contact-info{top: 0;}
   
+  #portfolio {
+    grid-template-columns: repeat(2, 1fr);  
+  }
+  
 }
 
 
@@ -1057,6 +1071,35 @@ ul.social-icons li a:hover{
 ==================================================*/ 
 
 @media only screen and (max-width : 767px) {
+
+  .wrapper{
+    padding-top: 50px;
+  }
+
+  #timeline {
+    padding-bottom: 0;
+}
+.contact-info .contact-detail {
+  padding-left: 0;
+  border-left: none;
+}
+  #portfolio {
+    grid-template-columns: repeat(1, 1fr);  
+    padding-top: 60px;
+  }
+  .service-contents .service-item .item-info {
+    margin-left: 0;
+    padding: 10px;
+}
+.contact-info{height: auto; padding: 40px;}
+ul.folio-menu li{
+  padding-bottom: 8px;
+}
+nav.nav-center-aligned .navbar-nav li a span {
+  position: static;
+    margin-right: 8px;
+}
+#skills img.img-skills{display:none;}
   
   nav.nav-center-aligned .navbar-collapse{text-align: left;}
   nav.nav-center-aligned .navbar-nav li::after{content: none;}
